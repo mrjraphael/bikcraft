@@ -1,3 +1,88 @@
-p {
-  color: blue
+body {
+  margin: 0px; /* resetando as margens */
+  font-family: Arial, Helvetica, sans-serif; /* definindo enquanto não faço upload das fonts novas */
+}
+
+ul {
+  margin: 0px; /* resetando estilos */
+  padding: 0px; /* resetando estilo */
+  list-style: none; /* sem o pontinho de lista */
+}
+
+a {
+  text-decoration: none; /* tirar decoração do texto, no caso sublinhado */
+}
+
+.header-bg {
+  background: #000; /* definindo a cor de fundo */
+}
+
+.header {
+  display: flex; /* colocar um item do lado do outro */
+  flex-wrap: wrap; /* quebrar para linha de baixo quando diminuir tela */
+  gap: 20px; /* Cria gap na parte de cima com a parte de baixo do menu */
+  justify-content: space-between; /* colocar um item em cada ponta */
+  align-items: center; /* alinhar centralizado com a nav */
+  box-sizing: border-box; /* para que o padding não SOMA com max-width */
+  padding: 20px; /* px para todos os lados das tags */
+  max-width: 1200px; /* segurar num container para deixar responsivo */
+  margin-left: auto; /* quero alinhar ao centro preciso definir margens */
+  margin-right: auto; /* quero alinhar ao centro preciso definir margens */
+}
+
+.header-menu {
+  display: flex; /* alinhar um do lado do outro */
+  flex-wrap: wrap; /* quebrar para linha de baixo quando diminuir tela */
+  gap: 40px; /* criar espaçamento entre itens */
+}
+
+.header-menu a {
+  color: #fff; /* definindo a cor */
+  display: inline-block; /* por padrão para quando um item cair embaixo do outro o padding não vai pegar direito, pois é um elemento inline */
+  padding: 16px 0px; /* para aumentar a área do "link" e facilitar clique */
+  font-size: 1.5em; /* tamanho da font */
+  position: relative;
+}
+
+.header-menu a:after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0px;
+  background: #fff;
+  margin-top: 4px;
+  transition: 0.3s; /* tempo que o underline cresce*/
+  position: absolute;
+
+}
+
+.header-menu a:hover:after {
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .header-menu {
+    gap: 20px;
+  }
+  .header-menu a {
+    background: #111;
+    padding: 12px 16px;
+    border-radius: 4px;
+  }
+  .header-menu a:hover {
+    background-color: #2e2e2e;
+  }
+  .header a:after {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-menu a {
+    gap: 12px;
+  }
+  .header-menu a {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
 }
