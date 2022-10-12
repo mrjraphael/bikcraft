@@ -1,34 +1,31 @@
 body {
-  margin: 0px;
-  color: #111111;
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px; /* resetando as margens */
+  font-family: Arial, Helvetica, sans-serif; /* definindo enquanto não faço upload das fonts novas */
+  color: #111111
+  padding-bottom: 600px;
 }
 
 h1,
 h2,
 h3,
 h4,
-h5,
-p,
 ul,
-blockquote,
-dd {
-  margin: 0px;
+p {
+  margin: 0px; /* resetando estilos */
 }
 
 ul {
-  padding: 0px;
-  list-style: none;
+  padding: 0px; /* resetando estilo */
+  list-style: none; /* sem o pontinho de lista */
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
+  text-decoration: none; /* tirar decoração do texto, no caso sublinhado */
+  color: inherit; /* herdar cor do pai */
 }
 
 img {
   max-width: 100%;
-  height: auto;
   display: block;
 }
 
